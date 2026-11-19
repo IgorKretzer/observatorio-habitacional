@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.pyc
+*.duckdb*
+data/processed/*
+!data/processed/.gitkeep
+.streamlit/secrets.toml
+.env*
+*.log
