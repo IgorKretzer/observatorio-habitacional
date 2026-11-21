@@ -1,0 +1,31 @@
+{
+  "application_version": "1.1",
+  "files": {
+    "indicators.json": "8a4781e6d7fcd51c5f1e8158c4d74067a3f17e50aa0a6af8bb36879ddfe89ee2",
+    "sources.json": "2b0487e13d2858afc8c9b7c4eb77b87896138d5a2b501554f6511808d3684347"
+  },
+  "methodology_notes": [
+    "Derived não implica fonte verified; preservar upstream_status.",
+    "Valores e anos desconhecidos são null, nunca zero ou ano presumido.",
+    "Anúncios são amostra exploratória; não estimam o mercado municipal.",
+    "Indicadores censitários por posse são subtotais parciais.",
+    "Nenhuma informação de autenticação ou registro pessoal é exportada."
+  ],
+  "municipality": {
+    "code": "4118501",
+    "name": "Pato Branco",
+    "state": "PR"
+  },
+  "quality_categories": {
+    "derived": "Calculado a partir de dados identificados",
+    "exploratory": "Levantamento exploratório",
+    "pending_source_verification": "Verificação documental pendente",
+    "unavailable": "Dado indisponível",
+    "verified": "Fonte primária e valor conferidos"
+  },
+  "rows": {
+    "indicators.json": 23,
+    "sources.json": 8
+  },
+  "schema_version": "1.0"
+}

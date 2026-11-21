@@ -9,3 +9,5 @@ data/processed/*
 .streamlit/secrets.toml
 .env*
 *.log
+
+artifacts/

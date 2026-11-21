@@ -1,9 +1,35 @@
+from html.parser import HTMLParser
 from pathlib import Path
 
 import pytest
 from streamlit.testing.v1 import AppTest
 
 from src.config import ROOT
+
+
+class CardValues(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.values = []
+        self.reading = False
+
+    def handle_starttag(self, tag, attrs):
+        self.reading = tag == "p" and "oh-kpi-value" in dict(attrs).get("class", "")
+
+    def handle_data(self, data):
+        if self.reading:
+            self.values.append(data)
+
+    def handle_endtag(self, tag):
+        if tag == "p":
+            self.reading = False
+
+
+def rendered_values(app):
+    parser = CardValues()
+    for element in app.get("html"):
+        parser.feed(element.proto.body)
+    return parser.values
 
 
 @pytest.mark.parametrize("page", [ROOT / "app.py", *sorted((ROOT / "pages").glob("*.py"))])
@@ -15,14 +41,15 @@ def test_pages_render_without_exceptions(page: Path):
 
 def test_overview_values():
     app = AppTest.from_file(str(ROOT / "app.py"), default_timeout=30).run()
-    assert [metric.value for metric in app.metric] == [
-        "37.323",
+    assert rendered_values(app) == [
         "R$ 4.075,06",
+        "37.323",
         "10.656",
         "3.053",
         "R$ 2.300,00",
         "13",
     ]
+    assert app.main.title[0].value == "Quanto custa morar em Pato Branco?"
 
 
 def test_market_filters_are_disabled_without_metadata():
@@ -42,7 +69,7 @@ def test_policy_filter_updates_table():
 
 def test_market_calculated_statistics():
     app = AppTest.from_file(str(ROOT / "pages/2_mercado_alugueis.py"), default_timeout=30).run()
-    assert [metric.value for metric in app.main.metric] == [
+    assert rendered_values(app) == [
         "13",
         "R$ 2.572,31",
         "R$ 2.300,00",

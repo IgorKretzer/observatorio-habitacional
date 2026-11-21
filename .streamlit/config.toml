@@ -1,12 +1,37 @@
 [theme]
+base = "light"
 primaryColor = "#8B342F"
 backgroundColor = "#F3F0E9"
 secondaryBackgroundColor = "#FFFFFF"
 textColor = "#171717"
-font = "sans serif"
+borderColor = "#DDD8D0"
+font = "Inter, sans-serif"
+headingFont = "Source Serif 4, serif"
+headingFontSizes = ["3rem", "2rem", "1.35rem", "1.15rem"]
+headingFontWeights = [600, 600, 600, 600]
+baseFontSize = 16
+baseRadius = "0.35rem"
+showWidgetBorder = true
+
+[[theme.fontFaces]]
+family = "Inter"
+url = "app/static/fonts/inter-variable.ttf"
+weight = "100 900"
+style = "normal"
+
+[[theme.fontFaces]]
+family = "Source Serif 4"
+url = "app/static/fonts/source-serif-4-variable.ttf"
+weight = "200 900"
+style = "normal"
 
 [server]
 headless = true
+fileWatcherType = "poll"
+enableStaticServing = true
 
 [browser]
 gatherUsageStats = false
+
+[client]
+toolbarMode = "viewer"

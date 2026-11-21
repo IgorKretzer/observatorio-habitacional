@@ -1,0 +1,90 @@
+[
+  {
+    "dataset_name": "Amostra exploratória previamente informada — uma única imobiliária",
+    "institution": "Pesquisa independente",
+    "methodology_url": null,
+    "notes": "13 valores. Imobiliária, data da coleta e URLs não informadas. Não representa o município.",
+    "reference_year": null,
+    "retrieved_at": null,
+    "source_id": "amostra_informada",
+    "source_url": null,
+    "status": "pending_source_verification"
+  },
+  {
+    "dataset_name": "Estoque de domicílios",
+    "institution": "Diagnóstico municipal — documento a identificar",
+    "methodology_url": null,
+    "notes": "Documento e abrangência conceitual ainda não conferidos.",
+    "reference_year": 2022,
+    "retrieved_at": null,
+    "source_id": "diagnostico_2022",
+    "source_url": null,
+    "status": "pending_source_verification"
+  },
+  {
+    "dataset_name": "Catálogo de legislação urbana",
+    "institution": "Município de Pato Branco",
+    "methodology_url": null,
+    "notes": "Página consultada; identificação dos documentos confirmada. Conteúdo jurídico não analisado.",
+    "reference_year": null,
+    "retrieved_at": "2026-11-19",
+    "source_id": "legislacao",
+    "source_url": "https://patobranco.pr.gov.br/legislacao-planejamento-urbano/",
+    "status": "pending_source_verification"
+  },
+  {
+    "dataset_name": "Remuneração formal — levantamento previamente informado",
+    "institution": "RAIS / IPARDES",
+    "methodology_url": null,
+    "notes": "Documento original ainda não anexado. Série nominal; vínculos não são pessoas.",
+    "reference_year": 2022,
+    "retrieved_at": null,
+    "source_id": "rais_2022",
+    "source_url": "https://www.ipardes.pr.gov.br/",
+    "status": "pending_source_verification"
+  },
+  {
+    "dataset_name": "Remuneração formal — levantamento previamente informado",
+    "institution": "RAIS / IPARDES",
+    "methodology_url": null,
+    "notes": "Documento original ainda não anexado. Série nominal; vínculos não são pessoas.",
+    "reference_year": 2023,
+    "retrieved_at": null,
+    "source_id": "rais_2023",
+    "source_url": "https://www.ipardes.pr.gov.br/",
+    "status": "pending_source_verification"
+  },
+  {
+    "dataset_name": "Remuneração formal — levantamento previamente informado",
+    "institution": "RAIS / IPARDES",
+    "methodology_url": null,
+    "notes": "Documento original ainda não anexado. Série nominal; vínculos não são pessoas.",
+    "reference_year": 2024,
+    "retrieved_at": null,
+    "source_id": "rais_2024",
+    "source_url": "https://www.ipardes.pr.gov.br/",
+    "status": "pending_source_verification"
+  },
+  {
+    "dataset_name": "Remuneração formal — levantamento previamente informado",
+    "institution": "RAIS / IPARDES",
+    "methodology_url": null,
+    "notes": "Documento original ainda não anexado. Série nominal; vínculos não são pessoas.",
+    "reference_year": 2025,
+    "retrieved_at": null,
+    "source_id": "rais_2025",
+    "source_url": "https://www.ipardes.pr.gov.br/",
+    "status": "pending_source_verification"
+  },
+  {
+    "dataset_name": "Censo 2022 — SIDRA 9928",
+    "institution": "IBGE",
+    "methodology_url": null,
+    "notes": "Categorias parciais previamente informadas; acesso automático retornou 403.",
+    "reference_year": 2022,
+    "retrieved_at": null,
+    "source_id": "sidra_9928",
+    "source_url": "https://sidra.ibge.gov.br/tabela/9928",
+    "status": "pending_source_verification"
+  }
+]

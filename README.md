@@ -8,6 +8,34 @@ institucional com Prefeitura, IBGE, IPARDES ou outros órgãos públicos.
 MVP funcional em Python 3.12, Streamlit, DuckDB, Pandas, PyArrow/Parquet, Plotly e OpenPyXL,
 com testes Pytest e lint/formatação Ruff. Inicia offline depois da instalação das dependências.
 
+## Versão 1.1 — apresentação editorial
+
+Interface reorganizada com Source Serif 4 e Inter locais, navegação única no topo,
+cards responsivos com proveniência, gráficos contextualizados e tabelas em português.
+A página inicial apresenta “Quanto custa morar em Pato Branco?” e caminhos temáticos.
+Os seeds, schemas, fórmulas, fontes e resultados estatísticos foram preservados.
+
+O erro de importação observado durante a atualização foi causado por um servidor que
+mantinha módulos antigos em memória; reinicie o Streamlit após atualizar os arquivos.
+A configuração usa monitoramento por polling. Mudanças de configuração de servidor
+também exigem reinicialização.
+
+Validação: 67 testes passaram e seis páginas foram verificadas em navegador local nas
+larguras 1440, 1024, 768, 390 e 320 px (30 combinações), com capturas e verificações
+geométricas. Isso não equivale a uma certificação integral de acessibilidade.
+
+- [Sistema de design e verificações](docs/design-system.md)
+- [Contrato JSON para um futuro frontend](docs/public-data.md)
+
+Para gerar os dados públicos estáticos, após inicializar o banco:
+
+```bash
+python scripts/export_public_data.py
+```
+
+O exportador usa consultas somente leitura e produz arquivos determinísticos em
+`public/data/`. Não há migração para Next.js nem serviço adicional nesta versão.
+
 ## Instalação e execução
 
 Entre nesta pasta (`observatorio-habitacional`). É necessário Python 3.12+ instalado.
@@ -55,7 +83,8 @@ versionado nem é necessário em outra máquina com Python instalado.
 
 ## Conteúdo
 
-- `app.py`: visão geral, seis cards, quatro gráficos e exportação dos indicadores.
+- `app.py`: entrada única e navegação nativa.
+- `pages/0_visao_geral.py`: apresentação editorial, seis cards e panoramas temáticos.
 - `pages/`: renda e trabalho, mercado de aluguéis, estoque habitacional, política urbana,
   metodologia e fontes.
 - `src/config.py`, `schemas.py`, `database.py`: caminhos, schemas e acesso analítico.
